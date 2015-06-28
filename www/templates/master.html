@@ -1,0 +1,19 @@
+<ion-view title="Master List">
+  <ion-nav-buttons side="left">
+    <button class="button icon-left ion-plus-round button-clear" ng-click="create()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list can-swipe="true">
+      <ion-item class="item" ng-repeat="bgtest in bgtests" href="#/details/{{bgtest.id}}">
+        {{bgtest.value}} {{bgtest.time_of_day}}
+
+        <ion-option-button class="button-info" ng-click="edit({{bgtest.id}})">
+          Edit
+        </ion-option-button>
+        <ion-option-button class="button-assertive" ng-click="delete({{bgtest.id}})">
+          Delete
+        </ion-delete-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
